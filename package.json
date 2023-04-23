@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
-    "set_git_credentials": "git config user.name TeCambio && git config user.email tecambioapp@gmail.com",
+    "git:config": "git config user.name TeCambio && git config user.email tecambioapp@gmail.com",
     "apk_build": "eas build -p android --profile preview"
   },
   "jest": {
@@ -39,7 +39,7 @@
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-web": "~0.18.10",
-    "react-native-webview": "11.26.0",
+    "react-native-webview": "^11.26.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
