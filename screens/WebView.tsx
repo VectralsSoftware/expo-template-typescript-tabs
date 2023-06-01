@@ -1,14 +1,33 @@
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, StyleSheet, TouchableOpacity } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 import WebView from 'react-native-webview';
 import Colors from '../constants/Colors';
+import { useState } from 'react';
+import Loading from '../components/Loading';
 
 export default function WebViewScreen({ navigation }: RootStackScreenProps<'WebView'>) {
+
+
   return (
-    <WebView source={{ uri: 'http://tecambio.app' }} style={{ flex: 1, backgroundColor: Colors.light.themeColor }} />
-  );
+    <WebView
+      javaScriptEnabled={true}
+      domStorageEnabled={true}
+      startInLoadingState={true}
+      pullToRefreshEnabled={true}
+      source={{ uri: 'https://tecambio.app' }}
+      style={{
+        flex: 1,
+        backgroundColor: Colors.light.themeColor
+      }}
+      renderLoading={() => {
+        return (
+         <Loading/>
+        )
+      }} />
+  )
+    ;
 }
 
 const styles = StyleSheet.create({

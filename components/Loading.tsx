@@ -5,7 +5,7 @@ import Colors from '../constants/Colors'
 const Loading = () => {
   return (
     <View style={styles.container}>
-      <ActivityIndicator size={'large'} color={Colors.light.primary}/>
+      <ActivityIndicator style={styles.spinner} size={'large'} color={Colors.light.primary}/>
     </View>
   )
 }
@@ -17,5 +17,14 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
       },
+      spinner: {
+        alignSelf: 'center', 
+        position: 'absolute',
+      }
 })
